@@ -1,0 +1,13 @@
+{
+  "name": "SharmRush Watersports",
+  "short_name": "SharmRush",
+  "description": "Premium kitesurfing, windsurfing and wingfoil on the Red Sea in Sharm El Sheikh.",
+  "start_url": "/en",
+  "display": "standalone",
+  "background_color": "#0a1f38",
+  "theme_color": "#0bb1bf",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

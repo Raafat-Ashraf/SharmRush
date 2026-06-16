@@ -1,0 +1,232 @@
+{
+  "site": {
+    "name": "SharmRush",
+    "tagline": "Premium Watersports in Sharm El Sheikh"
+  },
+  "nav": {
+    "home": "Home",
+    "activities": "Activities",
+    "location": "Location",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "book": "Book Now",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "common": {
+    "bookWhatsApp": "Book on WhatsApp",
+    "exploreActivities": "Explore Activities",
+    "learnMore": "Learn more",
+    "getDirections": "Get Directions",
+    "viewGallery": "View Gallery",
+    "contactUs": "Contact Us",
+    "scrollDown": "Scroll to explore",
+    "chatWhatsApp": "Chat on WhatsApp"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light mode",
+    "dark": "Dark mode"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "ar": "العربية",
+    "ru": "Русский"
+  },
+  "home": {
+    "meta": {
+      "title": "SharmRush | Sharm El Sheikh Watersports — Kitesurfing, Windsurfing & Wingfoil",
+      "description": "SharmRush is a premium watersports center in Sharm El Sheikh offering kitesurfing, windsurfing and wingfoil on the Red Sea. Book your session on WhatsApp today.",
+      "keywords": "Sharm El Sheikh watersports, kitesurfing in Sharm El Sheikh, windsurfing Egypt, wingfoil Sharm El Sheikh, water sports Red Sea, SharmRush kitesurfing center, best watersports in Egypt"
+    },
+    "hero": {
+      "badge": "Red Sea · Sharm El Sheikh",
+      "title": "Ride the Wind on the",
+      "titleHighlight": "Red Sea",
+      "subtitle": "SharmRush is your premium watersports center in Sharm El Sheikh for world-class kitesurfing, windsurfing and wingfoil — warm water, steady wind and certified instructors all year round.",
+      "primaryCta": "Book on WhatsApp",
+      "secondaryCta": "Explore Activities"
+    },
+    "stats": {
+      "years": "Years on the water",
+      "students": "Happy riders",
+      "rating": "Average rating",
+      "wind": "Windy days a year"
+    },
+    "intro": {
+      "title": "The best watersports in Egypt, right on the Red Sea",
+      "body": "Welcome to SharmRush, the home of premium watersports in Sharm El Sheikh. Our flat, turquoise lagoons and reliable thermal wind make the Red Sea one of the best places on earth to learn and progress in kitesurfing, windsurfing and wingfoil. Whether it is your very first lesson or you are chasing your next freestyle trick, our certified instructors and modern equipment get you on the water fast and safe."
+    },
+    "featured": {
+      "title": "Our Watersports Activities",
+      "subtitle": "Three ways to feel the rush of the Red Sea wind."
+    },
+    "why": {
+      "title": "Why ride with SharmRush",
+      "subtitle": "A premium experience from your first message to your last wave.",
+      "items": {
+        "instructors": {
+          "title": "Certified Instructors",
+          "body": "IKO & VDWS certified coaches with years of teaching on the Red Sea."
+        },
+        "equipment": {
+          "title": "Premium Equipment",
+          "body": "Latest kites, boards, wings and safety gear refreshed every season."
+        },
+        "spot": {
+          "title": "World-Class Spot",
+          "body": "Flat shallow lagoons, warm water and steady wind almost every day."
+        },
+        "languages": {
+          "title": "Multilingual Team",
+          "body": "We teach in English, Arabic and Russian so you always feel at home."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to hit the water?",
+      "subtitle": "Send us a message on WhatsApp and we will get you booked in minutes.",
+      "button": "Book on WhatsApp"
+    }
+  },
+  "activities": {
+    "meta": {
+      "title": "Activities | Kitesurfing, Windsurfing & Wingfoil in Sharm El Sheikh",
+      "description": "Discover SharmRush watersports activities in Sharm El Sheikh: kitesurfing lessons, windsurfing courses and wingfoil sessions on the Red Sea for all levels. Book on WhatsApp.",
+      "keywords": "kitesurfing in Sharm El Sheikh, windsurfing Egypt, wingfoil Sharm El Sheikh, kitesurfing lessons, watersports Red Sea, SharmRush kitesurfing center"
+    },
+    "title": "Watersports Activities",
+    "subtitle": "From your first lesson to advanced freeride — choose your discipline and we will handle the rest.",
+    "intro": "SharmRush offers the full range of premium watersports in Sharm El Sheikh. Every activity includes equipment, safety briefing and coaching tailored to your level, delivered by certified instructors on one of the best spots on the Red Sea.",
+    "labels": {
+      "level": "Level",
+      "duration": "Duration",
+      "highlights": "Highlights"
+    },
+    "items": {
+      "kitesurfing": {
+        "name": "Kitesurfing",
+        "tagline": "Harness the wind, glide over the Red Sea",
+        "description": "Kitesurfing in Sharm El Sheikh is unforgettable — steady thermal wind, warm shallow water and wide open lagoons make it the perfect place to learn or progress. Our IKO-certified instructors guide you from kite control on the beach to riding your first waves, with the latest gear and full safety equipment included.",
+        "level": "Beginner to Advanced",
+        "duration": "From 2 hours",
+        "highlights": {
+          "one": "IKO certified coaching",
+          "two": "Latest kites & safety gear",
+          "three": "Private & group lessons"
+        }
+      },
+      "windsurfing": {
+        "name": "Windsurfing",
+        "tagline": "The classic Red Sea rush",
+        "description": "Windsurfing in Egypt is a timeless thrill, and the Sharm El Sheikh lagoons are made for it. With flat water for beginners and stronger wind for freeriders, our windsurfing courses build your balance, technique and confidence step by step on premium boards and rigs suited to your level.",
+        "level": "Beginner to Advanced",
+        "duration": "From 2 hours",
+        "highlights": {
+          "one": "Stable beginner boards",
+          "two": "Flat-water learning zone",
+          "three": "Progression coaching"
+        }
+      },
+      "wingfoil": {
+        "name": "Wingfoil",
+        "tagline": "Fly above the water",
+        "description": "Wingfoil in Sharm El Sheikh is the fastest-growing watersport on the Red Sea — the magical feeling of flying silently above the surface on a hydrofoil. Our wingfoil sessions take you from handling the wing to your first foiling flights with modern, easy-to-learn equipment and patient expert coaching.",
+        "level": "Beginner to Advanced",
+        "duration": "From 2 hours",
+        "highlights": {
+          "one": "Modern wings & foils",
+          "two": "Fast learning curve",
+          "three": "Expert one-on-one coaching"
+        }
+      }
+    },
+    "cta": {
+      "title": "Not sure which to choose?",
+      "subtitle": "Message us on WhatsApp — we will recommend the perfect activity for your level.",
+      "button": "Ask on WhatsApp"
+    }
+  },
+  "location": {
+    "meta": {
+      "title": "Location | SharmRush Watersports Center in Sharm El Sheikh",
+      "description": "Find SharmRush watersports center in Sharm El Sheikh on the Red Sea. Easy to reach, with parking and beach access. Get directions and book kitesurfing, windsurfing or wingfoil.",
+      "keywords": "Sharm El Sheikh watersports location, watersports Red Sea, kitesurfing Sharm El Sheikh map, SharmRush center directions"
+    },
+    "title": "Find Us in Sharm El Sheikh",
+    "subtitle": "Right on the Red Sea, in the heart of Sharm El Sheikh.",
+    "body": "SharmRush is located on the shores of Sharm El Sheikh, one of the best watersports destinations on the Red Sea in Egypt. Our beach base offers easy access to flat lagoons and open water, with equipment storage, changing facilities and a relaxed lounge to enjoy between sessions. We are easy to reach from all major hotels and resorts in the area.",
+    "address": {
+      "label": "Address",
+      "value": "Sharm El Sheikh, South Sinai, Egypt"
+    },
+    "hours": {
+      "label": "Opening Hours",
+      "value": "Daily · 8:00 — 18:00"
+    },
+    "phone": {
+      "label": "WhatsApp & Phone"
+    },
+    "directions": "Get Directions",
+    "mapTitle": "SharmRush location on the map"
+  },
+  "gallery": {
+    "meta": {
+      "title": "Gallery | SharmRush Watersports in Sharm El Sheikh",
+      "description": "Photo gallery of SharmRush watersports in Sharm El Sheikh — kitesurfing, windsurfing and wingfoil action on the Red Sea. See the vibe before you book.",
+      "keywords": "Sharm El Sheikh watersports photos, kitesurfing Red Sea gallery, windsurfing Egypt photos, wingfoil Sharm El Sheikh"
+    },
+    "title": "Gallery",
+    "subtitle": "Real moments from the water — kitesurfing, windsurfing and wingfoil on the Red Sea.",
+    "intro": "A glimpse of life at SharmRush. From sunrise sessions on glassy lagoons to golden-hour freeride, this is the rush you can expect in Sharm El Sheikh.",
+    "close": "Close",
+    "previous": "Previous image",
+    "next": "Next image",
+    "captions": {
+      "kite1": "Kitesurfing across a turquoise Red Sea lagoon",
+      "kite2": "Catching air on a kiteboard at sunset",
+      "wind1": "Windsurfing on flat water in Sharm El Sheikh",
+      "wind2": "Windsurf rig powered up in steady wind",
+      "wing1": "Wingfoiling silently above the surface",
+      "wing2": "First foiling flights with SharmRush",
+      "spot1": "The turquoise lagoons of the Red Sea",
+      "spot2": "Golden hour over Sharm El Sheikh",
+      "spot3": "Warm shallow water perfect for learning"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact | Book SharmRush Watersports on WhatsApp",
+      "description": "Book kitesurfing, windsurfing or wingfoil with SharmRush in Sharm El Sheikh. Message us on WhatsApp for fast booking and the best watersports on the Red Sea.",
+      "keywords": "book watersports Sharm El Sheikh, kitesurfing booking Egypt, SharmRush WhatsApp, watersports Red Sea contact"
+    },
+    "title": "Let's Get You on the Water",
+    "subtitle": "Booking takes seconds — just send us a message on WhatsApp.",
+    "body": "The fastest way to book your kitesurfing, windsurfing or wingfoil session in Sharm El Sheikh is on WhatsApp. Tell us your level and preferred dates and our team will confirm everything in minutes — in English, Arabic or Russian.",
+    "whatsappCta": "Book on WhatsApp",
+    "callCta": "Call us",
+    "responseTime": "We usually reply within minutes",
+    "phoneLabel": "Phone & WhatsApp",
+    "hoursLabel": "Opening Hours",
+    "hoursValue": "Daily · 8:00 — 18:00",
+    "addressLabel": "Location",
+    "addressValue": "Sharm El Sheikh, South Sinai, Egypt",
+    "followLabel": "Follow the rush"
+  },
+  "footer": {
+    "tagline": "Premium kitesurfing, windsurfing and wingfoil on the Red Sea in Sharm El Sheikh.",
+    "quickLinks": "Quick Links",
+    "activities": "Activities",
+    "contact": "Contact",
+    "follow": "Follow Us",
+    "rights": "All rights reserved.",
+    "madeWith": "Ride the wind. Chase the rush."
+  },
+  "social": {
+    "tiktok": "TikTok",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "whatsapp": "WhatsApp"
+  }
+}
