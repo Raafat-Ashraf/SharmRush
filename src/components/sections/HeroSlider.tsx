@@ -52,7 +52,7 @@ export default function HeroSlider() {
     <section className="relative overflow-hidden bg-ocean-gradient pt-16" aria-label="Hero">
 
       {/* ── IMAGE SLIDER ─────────────────────────────────── */}
-      <div className="relative h-[52vh] min-h-[280px] w-full overflow-hidden sm:h-[60vh] lg:h-[68vh]">
+      <div className="relative h-[65vh] min-h-[360px] w-full overflow-hidden sm:h-[75vh] lg:h-[82vh]">
         {SLIDES.map((src, i) => (
           <div
             key={src}
@@ -68,7 +68,7 @@ export default function HeroSlider() {
               fill
               priority={i === 0}
               sizes="100vw"
-              className="object-cover"
+              className="object-cover object-center"
             />
           </div>
         ))}
