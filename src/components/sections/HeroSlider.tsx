@@ -52,7 +52,7 @@ export default function HeroSlider() {
     <section className="relative overflow-hidden bg-ocean-gradient pt-16" aria-label="Hero">
 
       {/* ── IMAGE SLIDER ─────────────────────────────────── */}
-      <div className="relative h-[65vh] min-h-[360px] w-full overflow-hidden sm:h-[75vh] lg:h-[82vh]">
+      <div className="relative h-[45vh] min-h-[260px] w-full overflow-hidden sm:h-[52vh] lg:h-[58vh]">
         {SLIDES.map((src, i) => (
           <div
             key={src}
