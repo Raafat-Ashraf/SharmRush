@@ -56,7 +56,7 @@ export default function Navbar() {
           />
           <span className="hidden flex-col leading-none sm:flex">
             <span className="text-base font-black tracking-tight text-white">
-              SHARM<span className="text-sun-400">RUSH</span>
+              SHARM KITE <span className="text-sun-400">DREAMS</span>
             </span>
             <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-aqua-400">
               Watersports

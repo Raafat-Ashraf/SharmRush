@@ -2,13 +2,13 @@ import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { buildMetadata, buildLocalBusinessJsonLd, buildWebsiteJsonLd } from "@/lib/seo";
 import type { Locale } from "@/lib/config";
-import HeroSection from "@/components/sections/HeroSection";
+import HeroSlider from "@/components/sections/HeroSlider";
 import ActivityCard from "@/components/sections/ActivityCard";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionLayout from "@/components/ui/SectionLayout";
 import { ACTIVITIES } from "@/lib/activities";
 import { WHATSAPP_URL } from "@/lib/config";
-import { Link } from "@/i18n/navigation";
+
 import { RiWhatsappFill, RiShieldCheckLine, RiToolsLine, RiMapPinLine, RiTeamLine } from "react-icons/ri";
 
 interface Props {
@@ -50,8 +50,8 @@ export default async function HomePage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}
       />
 
-      {/* Hero */}
-      <HeroSection />
+      {/* Hero Slider */}
+      <HeroSlider />
 
       {/* Intro */}
       <SectionLayout className="bg-white dark:bg-navy-950">

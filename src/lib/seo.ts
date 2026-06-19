@@ -38,7 +38,7 @@ export function buildMetadata({
       title,
       description,
       url,
-      siteName: "SharmRush",
+      siteName: "Sharm Kite Dreams",
       locale,
       type: "website",
       images: [
@@ -66,9 +66,9 @@ export function buildMetadata({
 
 export function buildLocalBusinessJsonLd(locale: Locale) {
   const names: Record<Locale, string> = {
-    en: "SharmRush Watersports Center",
-    ar: "مركز شارم راش للرياضات المائية",
-    ru: "SharmRush — центр водных видов спорта",
+    en: "Sharm Kite Dreams Watersports Center",
+    ar: "مركز شارم كايت دريمز للرياضات المائية",
+    ru: "Sharm Kite Dreams — центр водных видов спорта",
   };
   return {
     "@context": "https://schema.org",
@@ -107,7 +107,7 @@ export function buildWebsiteJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "SharmRush",
+    name: "Sharm Kite Dreams",
     url: SITE_URL,
     potentialAction: {
       "@type": "SearchAction",

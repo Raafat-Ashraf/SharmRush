@@ -9,11 +9,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | SharmRush",
-    default: "SharmRush | Watersports in Sharm El Sheikh",
+    template: "%s | Sharm Kite Dreams",
+    default: "Sharm Kite Dreams | Watersports in Sharm El Sheikh",
   },
   description:
-    "SharmRush — Premium kitesurfing, windsurfing and wingfoil on the Red Sea in Sharm El Sheikh, Egypt.",
+    "Sharm Kite Dreams — Premium kitesurfing, windsurfing and wingfoil on the Red Sea in Sharm El Sheikh, Egypt.",
   icons: [{ rel: "icon", url: "/favicon.svg", type: "image/svg+xml" }],
   manifest: "/manifest.json",
 };

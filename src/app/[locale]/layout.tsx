@@ -45,7 +45,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} dir={dir} suppressHydrationWarning>
-      <body className="overflow-guard">
+      <body className="overflow-guard" suppressHydrationWarning>
         {/*
           Inline script runs before paint — sets dark/light class immediately
           so there is no flash of unstyled content.

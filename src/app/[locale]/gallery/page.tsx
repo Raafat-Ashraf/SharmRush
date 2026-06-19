@@ -7,6 +7,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionLayout from "@/components/ui/SectionLayout";
 import GalleryGrid from "@/components/sections/GalleryGrid";
 
+
 interface Props { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -48,7 +49,7 @@ export default async function GalleryPage({ params }: Props) {
           </p>
         </ScrollReveal>
         <div className="mt-12">
-          <GalleryGrid locale={locale as Locale} />
+          <GalleryGrid />
         </div>
       </SectionLayout>
     </>
