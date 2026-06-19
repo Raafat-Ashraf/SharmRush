@@ -110,11 +110,32 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs sm:flex-row">
-          <p>
-            © {year} SharmRush. {t("footer.rights")}
-          </p>
-          <p className="text-aqua-500/80">{t("footer.madeWith")}</p>
+        <div className="mt-12 border-t border-white/10 pt-6">
+          <div className="flex flex-col items-center justify-between gap-3 text-xs sm:flex-row">
+            <p className="text-white/50">
+              © {year} Sharm Kite Dreams. {t("footer.rights")}
+            </p>
+            <p className="text-aqua-500/80">{t("footer.madeWith")}</p>
+          </div>
+
+          {/* DoGether credit */}
+          <div className="mt-4 flex flex-col items-center gap-2 border-t border-white/5 pt-4 sm:flex-row sm:justify-center sm:gap-4">
+            <p className="text-center text-[11px] text-white/35">
+              صُنع بواسطة{" "}
+              <span className="font-semibold text-aqua-500/70">
+                شركة DoGether للبرمجيات — مصر
+              </span>
+            </p>
+            <a
+              href="https://wa.me/201062485133"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-[11px] text-white/35 transition hover:text-[#25D366]"
+            >
+              <RiWhatsappFill size={13} className="text-[#25D366]" aria-hidden />
+              +20 10 624 85133
+            </a>
+          </div>
         </div>
       </div>
     </footer>
