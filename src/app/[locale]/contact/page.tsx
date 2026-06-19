@@ -10,8 +10,6 @@ import {
   RiWhatsappFill,
   RiMapPin2Line,
   RiTimeLine,
-  RiTiktokFill,
-  RiFacebookFill,
   RiInstagramLine,
 } from "react-icons/ri";
 
@@ -30,8 +28,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const SOCIAL_LINKS = [
-  { key: "tiktok", href: SOCIAL.tiktok, icon: RiTiktokFill, label: "TikTok" },
-  { key: "facebook", href: SOCIAL.facebook, icon: RiFacebookFill, label: "Facebook" },
   { key: "instagram", href: SOCIAL.instagram, icon: RiInstagramLine, label: "Instagram" },
 ];
 
@@ -118,20 +114,15 @@ export default async function ContactPage({ params }: Props) {
                 <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-aqua-500">
                   {t("followLabel")}
                 </p>
-                <div className="flex gap-3">
-                  {SOCIAL_LINKS.map(({ key, href, icon: Icon, label }) => (
-                    <a
-                      key={key}
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={label}
-                      className="flex h-10 w-10 items-center justify-center rounded-full border border-navy-200 text-navy-600 transition hover:border-aqua-400 hover:bg-aqua-400/10 hover:text-aqua-500 dark:border-white/10 dark:text-white/60"
-                    >
-                      <Icon size={18} aria-hidden />
-                    </a>
-                  ))}
-                </div>
+                <a
+                  href={SOCIAL.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 rounded-xl border border-pink-500/30 bg-gradient-to-r from-pink-500/10 to-purple-500/10 px-4 py-3 text-sm font-semibold text-white/80 transition hover:border-pink-400/60 hover:text-white"
+                >
+                  <RiInstagramLine size={22} className="text-pink-400" aria-hidden />
+                  <span>@kitesurfing_one</span>
+                </a>
               </div>
             </div>
           </ScrollReveal>

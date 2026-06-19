@@ -8,6 +8,7 @@ import { Link } from "@/i18n/navigation";
 import { WHATSAPP_URL } from "@/lib/config";
 import { RiWhatsappFill, RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
 import WaveBackground from "@/components/ui/WaveBackground";
+import ActivityTabs from "@/components/ui/ActivityTabs";
 
 const SLIDES = [
   "/slider/1.jpg",
@@ -93,7 +94,7 @@ export default function HeroSlider() {
         </button>
 
         {/* Dots */}
-        <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 gap-2">
+        <div className="absolute bottom-16 left-1/2 z-20 flex -translate-x-1/2 gap-2">
           {SLIDES.map((_, i) => (
             <button
               key={i}
@@ -105,9 +106,23 @@ export default function HeroSlider() {
             />
           ))}
         </div>
+
+        {/* ── ACTIVITY TABS — sits at bottom of slider ──── */}
+        <div className="absolute inset-x-0 bottom-0 z-30">
+          <ActivityTabs
+            onChange={(key) => {
+              if (key === "all") {
+                document.getElementById("featured")?.scrollIntoView({ behavior: "smooth" });
+              } else {
+                document.getElementById(key)?.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          />
+        </div>
+        {/* ── END TABS ────────────────────────────────── */}
+
       </div>
       {/* ── END SLIDER ───────────────────────────────────── */}
-
 
       {/* ── WATER ANIMATION + HERO TEXT ──────────────────── */}
       {/*

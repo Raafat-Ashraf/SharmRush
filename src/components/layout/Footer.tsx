@@ -3,15 +3,11 @@ import { Link } from "@/i18n/navigation";
 import { NAV_LINKS, SOCIAL, WHATSAPP_URL } from "@/lib/config";
 import Image from "next/image";
 import {
-  RiTiktokFill,
-  RiFacebookFill,
   RiInstagramLine,
   RiWhatsappFill,
 } from "react-icons/ri";
 
 const socialItems = [
-  { key: "tiktok", href: SOCIAL.tiktok, icon: RiTiktokFill },
-  { key: "facebook", href: SOCIAL.facebook, icon: RiFacebookFill },
   { key: "instagram", href: SOCIAL.instagram, icon: RiInstagramLine },
   { key: "whatsapp", href: WHATSAPP_URL, icon: RiWhatsappFill },
 ];
@@ -120,17 +116,19 @@ export default function Footer() {
 
           {/* DoGether credit */}
           <div className="mt-4 flex flex-col items-center gap-2 border-t border-white/5 pt-4 sm:flex-row sm:justify-center sm:gap-4">
-            <p className="text-center text-[11px] text-white/35">
-              صُنع بواسطة{" "}
-              <span className="font-semibold text-aqua-500/70">
-                شركة DoGether للبرمجيات — مصر
-              </span>
+            <p className="text-center text-[11px] text-white/35" dir="ltr">
+              <span dir="rtl" className="inline-block">صُنع بواسطة</span>
+              {" "}
+              <span className="font-semibold text-aqua-500/70" dir="ltr">DoGether</span>
+              {" "}
+              <span dir="rtl" className="inline-block">للبرمجيات — مصر</span>
             </p>
             <a
               href="https://wa.me/201062485133"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-[11px] text-white/35 transition hover:text-[#25D366]"
+              dir="ltr"
             >
               <RiWhatsappFill size={13} className="text-[#25D366]" aria-hidden />
               +20 10 624 85133

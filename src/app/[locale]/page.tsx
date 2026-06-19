@@ -79,7 +79,9 @@ export default async function HomePage({ params }: Props) {
         </ScrollReveal>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {ACTIVITIES.map((act, i) => (
-            <ActivityCard key={act.key} activity={act} index={i} />
+            <div key={act.key} id={act.key}>
+              <ActivityCard activity={act} index={i} />
+            </div>
           ))}
         </div>
       </SectionLayout>

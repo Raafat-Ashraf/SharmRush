@@ -6,9 +6,7 @@ export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 export const SOCIAL = {
   whatsapp: WHATSAPP_URL,
-  instagram: "https://instagram.com/sharmrush",
-  facebook: "https://facebook.com/sharmrush",
-  tiktok: "https://tiktok.com/@sharmrush",
+  instagram: "https://www.instagram.com/kitesurfing_one?igsh=eDBrY3VoN3hvZDI0&utm_source=qr",
 };
 
 export const GOOGLE_MAPS_EMBED =
