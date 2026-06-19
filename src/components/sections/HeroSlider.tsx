@@ -52,7 +52,6 @@ export default function HeroSlider() {
 
       {/* ── IMAGE SLIDER ─────────────────────────────────── */}
       <div className="relative h-[52vh] min-h-[280px] w-full overflow-hidden sm:h-[60vh] lg:h-[68vh]">
-        {/* Slides */}
         {SLIDES.map((src, i) => (
           <div
             key={src}
@@ -73,27 +72,27 @@ export default function HeroSlider() {
           </div>
         ))}
 
-        {/* Dark vignette bottom so content blends smoothly */}
+        {/* Vignette fades */}
         <div className="absolute inset-x-0 bottom-0 z-10 h-32 bg-gradient-to-t from-navy-950 to-transparent" />
         <div className="absolute inset-x-0 top-0 z-10 h-16 bg-gradient-to-b from-navy-950/40 to-transparent" />
 
-        {/* Prev / Next arrows */}
+        {/* Prev / Next */}
         <button
           onClick={() => { goPrev(); startTimer(); }}
           aria-label="Previous slide"
-          className="absolute left-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-white backdrop-blur-sm transition hover:bg-black/50 md:left-6"
+          className="absolute left-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-white backdrop-blur-sm transition hover:bg-black/55 md:left-6"
         >
           <RiArrowLeftLine size={20} />
         </button>
         <button
           onClick={() => { goNext(); startTimer(); }}
           aria-label="Next slide"
-          className="absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-white backdrop-blur-sm transition hover:bg-black/50 md:right-6"
+          className="absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-white backdrop-blur-sm transition hover:bg-black/55 md:right-6"
         >
           <RiArrowRightLine size={20} />
         </button>
 
-        {/* Dot indicators */}
+        {/* Dots */}
         <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 gap-2">
           {SLIDES.map((_, i) => (
             <button
@@ -109,92 +108,102 @@ export default function HeroSlider() {
       </div>
       {/* ── END SLIDER ───────────────────────────────────── */}
 
-      {/* Wave animations between slider and text */}
-      <div className="relative z-10 -mt-1">
+
+      {/* ── WATER ANIMATION + HERO TEXT ──────────────────── */}
+      {/*
+        WaveBackground uses absolute inset-0 internally — it needs a
+        relative parent with real height. We give it the full text section.
+      */}
+      <div className="relative min-h-[420px] pb-24 sm:min-h-[460px]">
+
+        {/* Bubbles + wave SVGs fill this container */}
         <WaveBackground />
-      </div>
 
-      {/* ── HERO TEXT CONTENT ────────────────────────────── */}
-      <div className="relative z-20 mx-auto flex flex-col items-center px-5 pb-24 pt-10 text-center">
+        {/* Content sits on top (z-20) */}
+        <div className="relative z-20 mx-auto flex flex-col items-center px-5 pt-10 text-center">
 
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-5 inline-flex items-center gap-2 rounded-full border border-aqua-500/30 bg-aqua-500/10 px-4 py-1.5 text-sm font-medium text-aqua-300 backdrop-blur-sm"
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-aqua-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-aqua-400" />
-          </span>
-          {t("hero.badge")}
-        </motion.div>
-
-        {/* H1 */}
-        <motion.h1
-          initial={{ opacity: 0, y: 22 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15 }}
-          className="mb-5 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
-        >
-          {t("hero.title")}{" "}
-          <span className="text-gradient-aqua">{t("hero.titleHighlight")}</span>
-        </motion.h1>
-
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.28 }}
-          className="mb-9 max-w-2xl text-base leading-relaxed text-white/75 sm:text-lg md:text-xl"
-        >
-          {t("hero.subtitle")}
-        </motion.p>
-
-        {/* CTAs */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.42 }}
-          className="flex flex-col gap-3 sm:flex-row sm:gap-4"
-        >
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#25D366] px-7 py-3.5 text-base font-bold text-white shadow-glow-sun transition hover:scale-105 hover:brightness-110 active:scale-95"
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-5 inline-flex items-center gap-2 rounded-full border border-aqua-500/30 bg-aqua-500/10 px-4 py-1.5 text-sm font-medium text-aqua-300 backdrop-blur-sm"
           >
-            <RiWhatsappFill size={20} aria-hidden />
-            {t("hero.primaryCta")}
-          </a>
-          <Link
-            href="/activities"
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-7 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"
-          >
-            {t("hero.secondaryCta")}
-          </Link>
-        </motion.div>
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-aqua-400 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-aqua-400" />
+            </span>
+            {t("hero.badge")}
+          </motion.div>
 
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 22 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.58 }}
-          className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-4 sm:gap-10"
-        >
-          {STATS_KEYS.map((key, i) => (
-            <div key={key} className="flex flex-col items-center gap-1">
-              <span className="text-3xl font-extrabold text-gradient-aqua sm:text-4xl">
-                {STATS_VALUES[i]}
-              </span>
-              <span className="text-xs font-medium uppercase tracking-widest text-white/50">
-                {t(`stats.${key}`)}
-              </span>
-            </div>
-          ))}
-        </motion.div>
+          {/* H1 */}
+          <motion.h1
+            initial={{ opacity: 0, y: 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+            className="mb-5 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
+          >
+            {t("hero.title")}{" "}
+            <span className="text-gradient-aqua">{t("hero.titleHighlight")}</span>
+          </motion.h1>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.28 }}
+            className="mb-9 max-w-2xl text-base leading-relaxed text-white/75 sm:text-lg md:text-xl"
+          >
+            {t("hero.subtitle")}
+          </motion.p>
+
+          {/* CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.42 }}
+            className="flex flex-col gap-3 sm:flex-row sm:gap-4"
+          >
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#25D366] px-7 py-3.5 text-base font-bold text-white shadow-glow-sun transition hover:scale-105 hover:brightness-110 active:scale-95"
+            >
+              <RiWhatsappFill size={20} aria-hidden />
+              {t("hero.primaryCta")}
+            </a>
+            <Link
+              href="/activities"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-7 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"
+            >
+              {t("hero.secondaryCta")}
+            </Link>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.58 }}
+            className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-4 sm:gap-10"
+          >
+            {STATS_KEYS.map((key, i) => (
+              <div key={key} className="flex flex-col items-center gap-1">
+                <span className="text-3xl font-extrabold text-gradient-aqua sm:text-4xl">
+                  {STATS_VALUES[i]}
+                </span>
+                <span className="text-xs font-medium uppercase tracking-widest text-white/50">
+                  {t(`stats.${key}`)}
+                </span>
+              </div>
+            ))}
+          </motion.div>
+
+        </div>
       </div>
+      {/* ── END WATER ANIMATION + TEXT ───────────────────── */}
+
     </section>
   );
 }
