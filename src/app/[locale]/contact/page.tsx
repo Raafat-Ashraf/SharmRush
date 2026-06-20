@@ -11,6 +11,7 @@ import {
   RiMapPin2Line,
   RiTimeLine,
   RiInstagramLine,
+  RiTelegramFill,
 } from "react-icons/ri";
 
 interface Props { params: Promise<{ locale: string }> }
@@ -28,7 +29,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const SOCIAL_LINKS = [
-  { key: "instagram", href: SOCIAL.instagram, icon: RiInstagramLine, label: "Instagram" },
+  { key: "instagram", href: SOCIAL.instagram, icon: RiInstagramLine, label: "Instagram", color: "text-pink-400", gradient: "from-pink-500/10 to-purple-500/10", border: "border-pink-500/30 hover:border-pink-400/60", handle: "@kitesurfing_one" },
+  { key: "telegram", href: SOCIAL.telegram, icon: RiTelegramFill, label: "Telegram", color: "text-sky-400", gradient: "from-sky-500/10 to-blue-500/10", border: "border-sky-500/30 hover:border-sky-400/60", handle: "@Errrror0" },
 ];
 
 export default async function ContactPage({ params }: Props) {
@@ -114,15 +116,20 @@ export default async function ContactPage({ params }: Props) {
                 <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-aqua-500">
                   {t("followLabel")}
                 </p>
-                <a
-                  href={SOCIAL.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 rounded-xl border border-pink-500/30 bg-gradient-to-r from-pink-500/10 to-purple-500/10 px-4 py-3 text-sm font-semibold text-white/80 transition hover:border-pink-400/60 hover:text-white"
-                >
-                  <RiInstagramLine size={22} className="text-pink-400" aria-hidden />
-                  <span>@kitesurfing_one</span>
-                </a>
+                <div className="flex flex-col gap-2">
+                  {SOCIAL_LINKS.map(({ key, href, icon: Icon, color, gradient, border, handle }) => (
+                    <a
+                      key={key}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center gap-3 rounded-xl border bg-gradient-to-r ${gradient} ${border} px-4 py-3 text-sm font-semibold text-white/80 transition hover:text-white`}
+                    >
+                      <Icon size={22} className={color} aria-hidden />
+                      <span>{handle}</span>
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </ScrollReveal>

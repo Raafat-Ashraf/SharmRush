@@ -5,11 +5,13 @@ import Image from "next/image";
 import {
   RiInstagramLine,
   RiWhatsappFill,
+  RiTelegramFill,
 } from "react-icons/ri";
 
 const socialItems = [
   { key: "instagram", href: SOCIAL.instagram, icon: RiInstagramLine },
   { key: "whatsapp", href: WHATSAPP_URL, icon: RiWhatsappFill },
+  { key: "telegram", href: SOCIAL.telegram, icon: RiTelegramFill },
 ];
 
 export default function Footer() {

@@ -6,6 +6,7 @@
   "nav": {
     "home": "Home",
     "activities": "Activities",
+    "reviews": "Reviews",
     "location": "Location",
     "gallery": "Gallery",
     "contact": "Contact",
@@ -202,6 +203,40 @@
     "addressLabel": "Location",
     "addressValue": "Sharm El Sheikh, South Sinai, Egypt",
     "followLabel": "Follow the dream"
+  },
+  "reviews": {
+    "meta": {
+      "title": "Reviews | Sharm Kite Dreams — Real Stories from the Water",
+      "description": "Read real reviews from kitesurfing, windsurfing and wingfoil riders at Sharm Kite Dreams in Sharm El Sheikh. See why our students love the Red Sea experience.",
+      "keywords": "Sharm Kite Dreams reviews, kitesurfing Sharm El Sheikh reviews, watersports Red Sea testimonials, kitesurfing Egypt reviews"
+    },
+    "title": "What Our Riders Say",
+    "subtitle": "Real stories from real people who rode the Red Sea with us.",
+    "cta": {
+      "title": "Ready to write your own story?",
+      "subtitle": "Book your session on WhatsApp and join hundreds of happy riders.",
+      "button": "Book on WhatsApp"
+    },
+    "items": {
+      "r1": {
+        "name": "Maksim R.",
+        "country": "Russia 🇷🇺",
+        "activity": "Kitesurfing",
+        "text": "I started kitesurfing here as a complete beginner. Within just 3 days I was riding on my own! The instructors are incredibly patient and the Red Sea conditions are absolutely perfect for learning. Best experience of my life — I'll definitely be back next season!"
+      },
+      "r2": {
+        "name": "Lucas M.",
+        "country": "Germany 🇩🇪",
+        "activity": "Windsurfing",
+        "text": "Amazing spot and an amazing team! The flat water lagoon is perfect for windsurfing. I came with my whole family and everyone had a blast. Super professional instructors who really care about your progress. We've already booked for next year!"
+      },
+      "r3": {
+        "name": "Elena V.",
+        "country": "Ukraine 🇺🇦",
+        "activity": "Wingfoil",
+        "text": "The wingfoil sessions exceeded all my expectations. Flying silently above the surface of the Red Sea is pure magic! The equipment is modern and well maintained, safety is taken seriously, and the instructor was fantastic. Highly recommend Sharm Kite Dreams to everyone!"
+      }
+    }
   },
   "footer": {
     "tagline": "Premium kitesurfing, windsurfing and wingfoil on the Red Sea in Sharm El Sheikh.",

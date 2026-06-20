@@ -4,12 +4,19 @@ import { buildMetadata, buildLocalBusinessJsonLd, buildWebsiteJsonLd } from "@/l
 import type { Locale } from "@/lib/config";
 import HeroSlider from "@/components/sections/HeroSlider";
 import ActivityCard from "@/components/sections/ActivityCard";
+import ReviewCard from "@/components/sections/ReviewCard";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionLayout from "@/components/ui/SectionLayout";
 import { ACTIVITIES } from "@/lib/activities";
 import { WHATSAPP_URL } from "@/lib/config";
+import { Link } from "@/i18n/navigation";
+import { RiWhatsappFill, RiShieldCheckLine, RiToolsLine, RiMapPinLine, RiTeamLine, RiArrowRightLine } from "react-icons/ri";
 
-import { RiWhatsappFill, RiShieldCheckLine, RiToolsLine, RiMapPinLine, RiTeamLine } from "react-icons/ri";
+const HOME_REVIEWS = [
+  { key: "r1", image: "/reviews/1.jpg", rating: 5 },
+  { key: "r2", image: "/reviews/2.jpg", rating: 5 },
+  { key: "r3", image: "/reviews/3.jpg", rating: 5 },
+] as const;
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -34,6 +41,7 @@ export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "home" });
   const tc = await getTranslations({ locale, namespace: "common" });
+  const tReviews = await getTranslations({ locale, namespace: "reviews" });
 
   const localBusiness = buildLocalBusinessJsonLd(locale as Locale);
   const website = buildWebsiteJsonLd();
@@ -109,6 +117,38 @@ export default async function HomePage({ params }: Props) {
               </ScrollReveal>
             );
           })}
+        </div>
+      </SectionLayout>
+
+      {/* Reviews preview */}
+      <SectionLayout className="bg-navy-950/5 dark:bg-navy-900/40">
+        <ScrollReveal className="mb-12 text-center">
+          <h2 className="mb-3 text-3xl font-extrabold text-navy-900 dark:text-white md:text-4xl">
+            {tReviews("title")}
+          </h2>
+          <p className="text-navy-700/70 dark:text-white/55">{tReviews("subtitle")}</p>
+        </ScrollReveal>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {HOME_REVIEWS.map((r, i) => (
+            <ReviewCard
+              key={r.key}
+              index={i}
+              image={r.image}
+              rating={r.rating}
+              name={tReviews(`items.${r.key}.name`)}
+              country={tReviews(`items.${r.key}.country`)}
+              activity={tReviews(`items.${r.key}.activity`)}
+              text={tReviews(`items.${r.key}.text`)}
+            />
+          ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Link
+            href="/reviews"
+            className="inline-flex items-center gap-2 rounded-full border border-aqua-500/40 px-6 py-2.5 text-sm font-semibold text-aqua-600 transition hover:bg-aqua-400/10 dark:text-aqua-400"
+          >
+            {tReviews("title")} <RiArrowRightLine size={16} aria-hidden />
+          </Link>
         </div>
       </SectionLayout>
 

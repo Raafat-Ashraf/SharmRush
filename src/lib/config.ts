@@ -7,6 +7,7 @@ export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 export const SOCIAL = {
   whatsapp: WHATSAPP_URL,
   instagram: "https://www.instagram.com/kitesurfing_one?igsh=eDBrY3VoN3hvZDI0&utm_source=qr",
+  telegram: "https://t.me/Errrror0",
 };
 
 export const GOOGLE_MAPS_EMBED =
@@ -18,6 +19,7 @@ export type Locale = (typeof LOCALES)[number];
 export const NAV_LINKS = [
   { href: "/", labelKey: "nav.home" },
   { href: "/activities", labelKey: "nav.activities" },
+  { href: "/reviews", labelKey: "nav.reviews" },
   { href: "/location", labelKey: "nav.location" },
   { href: "/gallery", labelKey: "nav.gallery" },
   { href: "/contact", labelKey: "nav.contact" },

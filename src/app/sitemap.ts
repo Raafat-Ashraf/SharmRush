@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL, LOCALES } from "@/lib/config";
 
-const pages = ["/", "/activities", "/location", "/gallery", "/contact"];
+const pages = ["/", "/activities", "/reviews", "/location", "/gallery", "/contact"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
