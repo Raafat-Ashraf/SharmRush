@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const REVIEWS = [
   { key: "r1", image: "/reviews/1.jpg", rating: 5 },
-  { key: "r2", image: "/reviews/2.jpg", rating: 5 },
-  { key: "r3", image: "/reviews/3.jpg", rating: 5 },
+  { key: "r2", image: "/reviews/3.jpg", rating: 5 },
+  { key: "r3", image: "/reviews/1.jpg", rating: 5 },
 ] as const;
 
 export default async function ReviewsPage({ params }: Props) {
