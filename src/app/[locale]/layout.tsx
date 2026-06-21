@@ -44,7 +44,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const dir = localeDirection[locale as Locale];
 
   return (
-    <html lang={locale} dir={dir} suppressHydrationWarning>
+    <html lang={locale} dir={dir} className="dark" suppressHydrationWarning>
       <body className="overflow-guard" suppressHydrationWarning>
         {/*
           Inline script runs before paint — sets dark/light class immediately
@@ -54,7 +54,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <script
           suppressHydrationWarning
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');document.documentElement.classList.toggle('dark',t!=='light')}catch(e){document.documentElement.classList.add('dark')}})()`,
+            __html: `(function(){try{if(localStorage.getItem('theme')==='light'){document.documentElement.classList.remove('dark')}}catch(e){}})()`,
           }}
         />
         <NextIntlClientProvider messages={messages}>

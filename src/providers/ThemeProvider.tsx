@@ -22,12 +22,15 @@ const ThemeContext = createContext<ThemeContextValue>({
 });
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
+  // Always start dark — matches className="dark" on <html>
   const [theme, setTheme] = useState<Theme>("dark");
 
   useEffect(() => {
-    // Read what the inline script already applied to <html>
-    const isDark = document.documentElement.classList.contains("dark");
-    setTheme(isDark ? "dark" : "light");
+    // Only switch to light if user explicitly chose it
+    if (localStorage.getItem("theme") === "light") {
+      setTheme("light");
+    }
+    // Dark is already applied via className="dark" on <html> — nothing to do
   }, []);
 
   const toggle = useCallback(() => {
